@@ -1,9 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
+const cors = require('cors');
 
 //starting app
 const app = express();
+
+app.use(cors());
+//para minha app poder ser acessada por outros
 
 app.use(express.json());
 //para interpretar todos dados json
